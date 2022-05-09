@@ -8,12 +8,12 @@
     --clr-soft-magenta: hsl(300, 69%, 71%);
     /* TYPOGRAPHY */
     --fs-body: 0.9375rem;
-    --ff-body: 'Poppins', sans-serif;
-    --ff-headings: 'Open Sans', sans-serif;
+    --ff-headings: 'Poppins', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
     --fw-400: 400;
     --fw-600: 600;
     /*BORDERS*/
-    --border-radius: 0.3rem;
+    --border-radius: 1.5rem;
 }
 
 /*-----------------------------------*\
@@ -60,7 +60,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
@@ -109,5 +109,68 @@ body {
     background-size: contain;
     background-color: var(--clr-violet);
     color: white;
-    padding: 3rem;
+    padding: 1rem 2.2rem;
+}
+
+.main {
+    font-family: var(--ff-body);
+}
+
+.footer {
+    text-align: center;
+}
+
+/*-----------------------------------*\
+ * #COMPONENTS
+\*-----------------------------------*/
+
+.intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.intro__header {
+    margin-bottom: 0.8rem;
+    font-family: var(--ff-headings);
+}
+
+.header__logo {
+    max-width: 42%;
+    margin-bottom: 3rem;
+}
+
+.intro__img {
+    margin-bottom: 3.6rem;
+}
+
+.intro__text {
+    font-family: var(--ff-body);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.intro__button {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 0.6rem 4.5rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.social__icon {
+    flex: 1;
+    max-width: 2rem;
+    border: solid 1px white;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+
+.fa-brands {
+    transform: translateY(2px);
 }
