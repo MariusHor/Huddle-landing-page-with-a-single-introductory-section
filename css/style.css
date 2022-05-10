@@ -109,7 +109,9 @@ body {
     background-size: contain;
     background-color: var(--clr-violet);
     color: white;
-    padding: 1rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .main {
@@ -118,11 +120,27 @@ body {
 
 .footer {
     text-align: center;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    max-width: 90rem;
+    padding: 0 2.3rem;
 }
 
 /*-----------------------------------*\
  * #COMPONENTS
 \*-----------------------------------*/
+
+.header {
+    width: 100%;
+    margin-top: 1rem;
+}
 
 .intro {
     text-align: center;
@@ -150,11 +168,30 @@ body {
 }
 
 .intro__button {
+    font-family: var(--ff-headings);
     background: white;
     border-radius: var(--border-radius);
     padding: 0.6rem 4.5rem;
     font-size: 0.8rem;
     text-decoration: none;
+    box-shadow: 0px 5px 10px rgb(0, 0, 0, 30%);
+}
+
+.intro__button:hover {
+    background: var(--clr-soft-magenta);
+    transition: all 300ms ease-in-out;
+    color: white;
+}
+
+.intro__button:focus-visible {
+    outline-style: dotted;
+    outline-width: 0.2rem;
+    outline-color: yellow;
+}
+
+.intro__button:active {
+    background: white;
+    color: var(--clr-soft-magenta);
 }
 
 .social {
@@ -164,6 +201,7 @@ body {
 }
 
 .social__icon {
+    color: white;
     flex: 1;
     max-width: 2rem;
     border: solid 1px white;
@@ -171,6 +209,99 @@ body {
     padding: 0.2rem;
 }
 
+.social__icon:hover {
+    color: var(--clr-soft-magenta);
+    border: solid 1px var(--clr-soft-magenta);
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 200ms ease-in-out;
+}
+
+.social__icon:focus-visible {
+    outline-style: dotted;
+    outline-width: 0.2rem;
+    outline-color: yellow;
+}
+.social__icon:active {
+    color: rgb(0, 0, 255);
+}
+
 .fa-brands {
-    transform: translateY(2px);
+    transform: translateY(1px);
+}
+
+/*-----------------------------------*\
+ * #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media only screen and (min-width: 48em) {
+
+    .container {
+        padding: 0 4.5rem;
+    }
+
+    .header {
+        margin-top: 3rem;
+    }
+    
+    body {
+        background: url(../images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--clr-violet);
+        background-position: bottom;
+    }
+
+    .intro {
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+
+    .intro__about {
+        margin-top: 4rem;
+        margin-right: 10rem;
+    }
+
+    .intro__header {
+        font-size: 2.5rem;
+    }
+
+    .intro__text {
+        font-size: 1.1rem;
+    }
+
+    .intro__button {
+        padding: 0.6rem 4.5rem;
+        font-size: 1.1rem;
+        border-radius: 1.8rem;
+        padding: 1rem 4rem;
+    }
+
+    .social {
+        gap: 1.4rem;
+    }
+
+    .header__logo {
+        margin-bottom: 5rem;
+    }
+
+    .social__icon {
+        transform: scale(1.2);
+    }
+}
+
+@media only screen and (min-width: 78em) {
+    .social {
+        justify-content: flex-end;
+    }
+
+    .intro {
+        display: flex;
+        gap: 5rem;
+        margin-bottom: 0;
+    }
+
+    .intro__about {
+        margin-right: 0;
+    }
 }
