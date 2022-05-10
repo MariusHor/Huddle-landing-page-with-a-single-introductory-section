@@ -162,6 +162,7 @@ body {
 }
 
 .intro__button {
+    color: var(--clr-violet);
     display: inline-block;
     font-family: var(--ff-headings);
     background: white;
