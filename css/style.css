@@ -7,7 +7,7 @@
     --clr-violet: hsl(257, 40%, 49%);
     --clr-soft-magenta: hsl(300, 69%, 71%);
     /* TYPOGRAPHY */
-    --fs-body: 0.9375rem;
+    --fs-body: 1rem;
     --ff-headings: 'Poppins', sans-serif;
     --ff-body: 'Open Sans', sans-serif;
     --fw-400: 400;
@@ -108,14 +108,12 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
     background-color: var(--clr-violet);
+    font-size: var(--fs-body);
+    font-family: var(--ff-body);
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.main {
-    font-family: var(--ff-body);
 }
 
 .footer {
@@ -124,11 +122,9 @@ body {
     margin-bottom: 2.5rem;
 }
 
-.container {
+.wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
     max-width: 90rem;
     padding: 0 2.3rem;
 }
@@ -162,8 +158,6 @@ body {
 }
 
 .intro__text {
-    font-family: var(--ff-body);
-    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -236,7 +230,7 @@ body {
 
 @media only screen and (min-width: 48em) {
 
-    .container {
+    .wrapper {
         padding: 0 4.5rem;
     }
 
