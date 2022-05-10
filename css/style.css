@@ -158,10 +158,11 @@ body {
 }
 
 .intro__text {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .intro__button {
+    display: inline-block;
     font-family: var(--ff-headings);
     background: white;
     border-radius: var(--border-radius);
@@ -172,6 +173,7 @@ body {
 }
 
 .intro__button:hover {
+    transform: scale(1.05);
     background: var(--clr-soft-magenta);
     transition: all 300ms ease-in-out;
     color: white;
@@ -189,39 +191,39 @@ body {
 }
 
 .social {
+    list-style: none;
     display: flex;
     justify-content: center;
     gap: 0.7rem;
 }
 
-.social__icon {
-    color: white;
-    flex: 1;
-    max-width: 2rem;
+.social__link {
     border: solid 1px white;
     border-radius: 50%;
-    padding: 0.2rem;
+    padding: 0.2rem 0.4rem;
+    color: white;
+    display: inline-block;
 }
 
-.social__icon:hover {
+.social__link:hover {
     color: var(--clr-soft-magenta);
     border: solid 1px var(--clr-soft-magenta);
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(0.9);
     transition: 200ms ease-in-out;
 }
 
-.social__icon:focus-visible {
+.social__link:focus-visible {
     outline-style: dotted;
     outline-width: 0.2rem;
     outline-color: yellow;
 }
-.social__icon:active {
+.social__link:active {
     color: rgb(0, 0, 255);
 }
 
 .fa-brands {
-    transform: translateY(1px);
+    width: 16px;
 }
 
 /*-----------------------------------*\
@@ -235,7 +237,7 @@ body {
     }
 
     .header {
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
     
     body {
@@ -256,8 +258,7 @@ body {
     }
 
     .intro__about {
-        margin-top: 4rem;
-        margin-right: 10rem;
+        margin-top: 2rem;
     }
 
     .intro__header {
@@ -279,16 +280,24 @@ body {
         gap: 1.4rem;
     }
 
+    .social__link {
+        padding: 0.5rem 0.7rem;
+    }
+
     .header__logo {
         margin-bottom: 5rem;
     }
 
-    .social__icon {
+    .fa-brands {
         transform: scale(1.2);
     }
 }
 
 @media only screen and (min-width: 80em) {
+    .header {
+        margin-top: 3rem;
+    }
+
     .social {
         justify-content: flex-end;
     }
@@ -300,6 +309,6 @@ body {
     }
 
     .intro__about {
-        margin-right: 0;
+        margin-top: 4rem;
     }
 }
