@@ -251,6 +251,10 @@ body {
         margin-bottom: 3rem;
     }
 
+    .intro__img {
+        margin-bottom: 0.5rem;
+    }
+
     .intro__about {
         margin-top: 4rem;
         margin-right: 10rem;
@@ -284,7 +288,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 78em) {
+@media only screen and (min-width: 80em) {
     .social {
         justify-content: flex-end;
     }
